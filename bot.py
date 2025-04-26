@@ -16,11 +16,12 @@ TOKEN = os.getenv("TOKEN")
 MODEL_PATH = "tetianamohorian/hate_speech_model"
 
 db_config = {
-    "host": "mysql",
-    "user": "root",
-    "password": "0674998280tanya",
-    "database": "telegram_bot"
+    "host": os.environ.get("MYSQLHOST"),
+    "user": os.environ.get("MYSQLUSER"),
+    "password": os.environ.get("MYSQLPASSWORD"),
+    "database": os.environ.get("MYSQLDATABASE")
 }
+
 
 def save_violator(username, message):
     """Сохраняет нарушителя в базу данных"""
