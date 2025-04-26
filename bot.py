@@ -90,9 +90,17 @@ def main():
     # Добавление обработчиков команд и сообщений
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, check_message))
-
+    logging.info("✅ Bot started successfully!")
     # Запуск бота
     app.run_polling()
 
 if __name__ == "__main__":
-    main()
+     while True:
+        try:
+            main()
+        except Exception as e:
+            logging.error(f"❗ Bot crashed with error: {e}")
+        finally:
+            import time
+            logging.info("♻️ Restarting bot in 10 seconds...")
+            time.sleep(10)
