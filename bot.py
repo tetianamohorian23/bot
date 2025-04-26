@@ -16,10 +16,10 @@ TOKEN = os.getenv("TOKEN")
 MODEL_PATH = "tetianamohorian/hate_speech_model"
 
 db_config = {
-    "host": os.environ.get("MYSQLHOST"),
-    "user": os.environ.get("MYSQLUSER"),
-    "password": os.environ.get("MYSQLPASSWORD"),
-    "database": os.environ.get("MYSQLDATABASE")
+    "host": os.environ.get("MYSQL_ADDON_HOST"),
+    "user": os.environ.get("MYSQL_ADDON_USER"),
+    "password": os.environ.get("MYSQL_ADDON_PASSWORD"),
+    "database": os.environ.get("MYSQL_ADDON_DB")
 }
 
 
