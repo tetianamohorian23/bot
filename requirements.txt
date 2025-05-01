@@ -4,3 +4,4 @@ torch
 python-dotenv
 mysql-connector-python
 flask
+psycopg2
